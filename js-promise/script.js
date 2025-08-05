@@ -102,3 +102,11 @@ AsyncFunc1(1).then((res) => {
 }).then((res) => {
   console.log("Both data was fetched..");
 })
+
+
+//doing same work using callback hell
+console.log("Fetching data1 from function1...");
+AsyncFunc1(1, () => {
+  console.log("Fetching data1 from function2...");
+  AsyncFunc2(2);
+})
