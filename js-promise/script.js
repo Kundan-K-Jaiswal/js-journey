@@ -59,3 +59,38 @@ repromise.catch((err) => {
 })
 
 doWork(50);
+
+
+//Promise Chaining
+const AsyncFunc1 = (dataid1, callback) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("data1", dataid1);
+      if (callback) {
+        callback();
+      }
+      resolve("data1 completed", dataid1);
+    }, 5000)
+  })
+}
+
+const AsyncFunc2 = (dataid2) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("data2", dataid2);
+      resolve("data2 completed", dataid2);
+    }, 5000)
+  })
+}
+
+//using promise chaning
+console.log("Fetching data1 from function1...");
+let d1 = AsyncFunc1(1);
+d1.then((res) => {
+  console.log("Data1 recieved :", res);
+  console.log("Fetching data2 from function2...");
+  let d2 = AsyncFunc2(2);
+  d2.then((res) => {
+    console.log("Data2 recieved :", res);
+  })
+})
