@@ -110,3 +110,27 @@ AsyncFunc1(1, () => {
   console.log("Fetching data1 from function2...");
   AsyncFunc2(2);
 })
+
+
+//doing same work using async-await
+async function usingasync() {
+  await AsyncFunc1(1);
+  await AsyncFunc2(2);
+}
+usingasync();
+
+
+//async function example
+async function dataGetting() {
+  await AsyncFunc1();
+  console.log("dataGetting completed");
+}
+dataGetting();
+
+
+//IIFE Example
+(async function () {
+  await AsyncFunc1();
+  console.log("dataGetting completed");
+})();
+dataGetting();
