@@ -94,3 +94,11 @@ d1.then((res) => {
     console.log("Data2 recieved :", res);
   })
 })
+
+
+//using promise chaning in simpler manner
+AsyncFunc1(1).then((res) => {
+  return AsyncFunc2(2)
+}).then((res) => {
+  console.log("Both data was fetched..");
+})
