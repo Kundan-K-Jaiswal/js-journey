@@ -34,4 +34,28 @@ function doWork(id, nextdata) {
   })
 }
 
+
+const createPromise = () => {
+  return new Promise((resolve, reject) => {
+    console.log("promise was created");
+    if (count % 2 === 0) {
+      count++;
+      resolve("Completed");
+    } else {
+      count++;
+      reject("Not Completed");
+    }
+  })
+}
+
+let rpromise = createPromise();
+rpromise.then((res) => {
+  console.log(res);
+})
+
+let repromise = createPromise();
+repromise.catch((err) => {
+  console.log(err);
+})
+
 doWork(50);
