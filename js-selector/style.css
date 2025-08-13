@@ -1,0 +1,19 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+p {
+  width: 80vw;
+  text-align: center;
+}
