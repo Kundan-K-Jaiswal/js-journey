@@ -1,4 +1,4 @@
-alert("Let's begain our JS Journey");
+alert("Let's begin our JS Journey");
 
 console.log("Welcome! to the console of my first JavaScript.");
 
